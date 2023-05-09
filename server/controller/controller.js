@@ -76,5 +76,5 @@ exports.loginUser = (req,res)=>{
 exports.deleteUser =  async (req, res)=>{
     var data = await userModel.deleteOne({_id:req.body.id});
     res.send(data); 
-        
+         
   }

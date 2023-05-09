@@ -1,0 +1,30 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<!-- <script src="/js/index.js"></script> -->
+<script>
+        $(function () {
+            $('.delete').click(function () {
+                var user_id = $(this).attr('data-id')
+                if (user_id != "") {
+                    $.post('/delete',
+                        {
+                            id: user_id
+                        },
+                        function (response, status) {
+                            console.log(status)
+                            console.log(response)
+                            if(response.acknowledged == true){
+                                alert('Data has been delted successfully')
+                                window.location.reload()
+                            }else{
+                                alert('Data could not delted successfully') 
+                            }
+
+                        })
+
+                }
+            })
+        })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+const express = require('express')
+const router = express.Router()
+const renderServices = require('../services/render')
+const controller = require('../controller/controller')
+
+
+/* router.get("/",(req, res)=>{ 
+      res.render('index');
+ }) */
+
+router.get("/",renderServices.homePageRoute)
+
+router.get("/add",renderServices.addUserPageRoute)
+
+router.get("/update-user",renderServices.updateUserPageRoute)
+
+router.post("/delete",controller.deleteUser)
+
+router.post("/add_user",controller.addUser)
+
+router.post("/update-user",controller.updateUser)
+
+router.post("/fetchUser",controller.fetchUser)
+
+router.get("/login",renderServices.loginPageRoute)
+
+router.post("/login",controller.loginUser)
+
+
+
+
+module.exports  =   router

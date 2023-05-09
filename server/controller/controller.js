@@ -67,7 +67,7 @@ exports.loginUser = (req,res)=>{
     if(!data){
         res.send("Please enter valid credentials")
     }else{
-        res.send("you are successfully logged in")
+        res.send("you are successfully login")
     }
    
 }

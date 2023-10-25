@@ -19,5 +19,14 @@
     "mongoose": "^7.0.4",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.22"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajDelhi/node-crud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RajDelhi/node-crud/issues"
+  },
+  "homepage": "https://github.com/RajDelhi/node-crud#readme"
 }
